@@ -7,7 +7,7 @@ nnfs.init()
 
 start = time.time()
 
-# Create dataset
+# Create dataset (samples = 100, classes = 3)
 X, y = spiral_data(samples=2000000, classes=3)
 
 # Create Dense layer with 2 input features and 3 output values
