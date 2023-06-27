@@ -5,7 +5,7 @@ from nnfs.datasets import spiral_data
 
 nnfs.init()
 
-start = time.time()
+start = time.perf_counter()
 
 # Create dataset (samples = 100, classes = 3)
 X, y = spiral_data(samples=2000000, classes=3)
@@ -25,4 +25,4 @@ activation1.forward(dense1.output)
 
 # Let's see output of the first few samples
 print(activation1.output[:5])
-print(time.time() - start)
+print(time.perf_counter() - start)

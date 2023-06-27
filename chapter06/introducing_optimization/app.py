@@ -1,12 +1,9 @@
 from layers import Layer_Dense, Activation_ReLU, Activation_Softmax, Layer, Loss_CategoricalCrossentropy
-import time
 import nnfs
 from nnfs.datasets import spiral_data
 import numpy as np
 
 nnfs.init()
-
-start = time.time()
 
 # Create dataset (samples = 100, classes = 3)
 X, y = spiral_data(samples=1_000_000, classes=3)

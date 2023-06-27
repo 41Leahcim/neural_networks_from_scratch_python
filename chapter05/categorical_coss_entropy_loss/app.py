@@ -17,7 +17,7 @@ def calculate_accuracy(outputs, targets: np.ndarray):
 
 nnfs.init()
 
-start = time.time()
+start = time.perf_counter()
 
 # Create dataset (samples = 100, classes = 3)
 X, y = spiral_data(samples=1_000_000, classes=3)
@@ -49,4 +49,4 @@ print(loss_function.calculate(layers[-1].output, y))
 print(calculate_accuracy(layers[-1].output, y))
 
 # Print the run-time
-print(time.time() - start)
+print(time.perf_counter() - start)
